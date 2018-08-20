@@ -1,0 +1,248 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateVikings (20180820211106)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "vikings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "weight" float, "body_fat" float, "residence" varchar, "calories" float, "image_url" varchar, "diet_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820211106_create_vikings.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_vikings_on_diet_id" ON "vikings" ("diet_id")[0m
+  ↳ db/migrate/20180820211106_create_vikings.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820211106"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateExercises (20180820211248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "type" varchar, "time" integer, "calories" float, "instruction_link" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820211248_create_exercises.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820211248"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateDiets (20180820211332)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "diets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "carbs" float, "fat" float, "protein" float, "type" varchar, "calculated_calories" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820211332_create_diets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820211332"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateValhallas (20180820211535)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "valhallas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820211535_create_valhallas.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820211535"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateVikingExercises (20180820212250)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "viking_exercises" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "viking_id" integer, "exercise_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820212250_create_viking_exercises.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_viking_exercises_on_viking_id" ON "viking_exercises" ("viking_id")[0m
+  ↳ db/migrate/20180820212250_create_viking_exercises.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_viking_exercises_on_exercise_id" ON "viking_exercises" ("exercise_id")[0m
+  ↳ db/migrate/20180820212250_create_viking_exercises.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820212250"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateVikingValhallas (20180820212320)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "viking_valhallas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "viking_id" integer, "valhalla_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820212320_create_viking_valhallas.rb:3
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE  INDEX "index_viking_valhallas_on_viking_id" ON "viking_valhallas" ("viking_id")[0m
+  ↳ db/migrate/20180820212320_create_viking_valhallas.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_viking_valhallas_on_valhalla_id" ON "viking_valhallas" ("valhalla_id")[0m
+  ↳ db/migrate/20180820212320_create_viking_valhallas.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820212320"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (4.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-20 21:57:29.478104"], ["updated_at", "2018-08-20 21:57:29.478104"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateVikings (20180820211106)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "vikings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "weight" float, "body_fat" float, "residence" varchar, "calories" float, "image_url" varchar, "diet_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820211106_create_vikings.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_vikings_on_diet_id" ON "vikings" ("diet_id")[0m
+  ↳ db/migrate/20180820211106_create_vikings.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820211106"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateExercises (20180820211248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "exercise_type" varchar, "time" integer, "calories" float, "instruction_link" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820211248_create_exercises.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820211248"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateDiets (20180820211332)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "diets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "carbs" float, "fat" float, "protein" float, "diet_type" varchar, "calculated_calories" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820211332_create_diets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820211332"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateValhallas (20180820211535)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "valhallas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820211535_create_valhallas.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820211535"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateVikingExercises (20180820212250)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "viking_exercises" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "viking_id" integer, "exercise_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820212250_create_viking_exercises.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_viking_exercises_on_viking_id" ON "viking_exercises" ("viking_id")[0m
+  ↳ db/migrate/20180820212250_create_viking_exercises.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_viking_exercises_on_exercise_id" ON "viking_exercises" ("exercise_id")[0m
+  ↳ db/migrate/20180820212250_create_viking_exercises.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820212250"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateVikingValhallas (20180820212320)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "viking_valhallas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "viking_id" integer, "valhalla_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180820212320_create_viking_valhallas.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_viking_valhallas_on_viking_id" ON "viking_valhallas" ("viking_id")[0m
+  ↳ db/migrate/20180820212320_create_viking_valhallas.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_viking_valhallas_on_valhalla_id" ON "viking_valhallas" ("valhalla_id")[0m
+  ↳ db/migrate/20180820212320_create_viking_valhallas.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180820212320"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (2.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-20 21:59:41.167633"], ["updated_at", "2018-08-20 21:59:41.167633"]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mDiet Create (1.5ms)[0m  [1m[32mINSERT INTO "diets" ("carbs", "fat", "protein", "diet_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["carbs", 40.0], ["fat", 20.0], ["protein", 40.0], ["diet_type", "bulking"], ["created_at", "2018-08-20 21:59:49.154956"], ["updated_at", "2018-08-20 21:59:49.154956"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mDiet Create (1.2ms)[0m  [1m[32mINSERT INTO "diets" ("carbs", "fat", "protein", "diet_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["carbs", 40.0], ["fat", 20.0], ["protein", 40.0], ["diet_type", "bulking"], ["created_at", "2018-08-20 22:00:06.805840"], ["updated_at", "2018-08-20 22:00:06.805840"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDiet Create (0.5ms)[0m  [1m[32mINSERT INTO "diets" ("carbs", "fat", "protein", "diet_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["carbs", 20.0], ["fat", 20.0], ["protein", 60.0], ["diet_type", "cutting"], ["created_at", "2018-08-20 22:00:06.810234"], ["updated_at", "2018-08-20 22:00:06.810234"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mDiet Load (0.3ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mViking Create (8.5ms)[0m  [1m[32mINSERT INTO "vikings" ("name", "age", "weight", "body_fat", "residence", "diet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sean Huang"], ["age", 26], ["weight", 190.5], ["body_fat", 15.0], ["residence", "708 Main St. Houston, TX 77002"], ["diet_id", 1], ["created_at", "2018-08-20 22:00:06.888368"], ["updated_at", "2018-08-20 22:00:06.888368"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mDiet Load (0.2ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mViking Create (0.7ms)[0m  [1m[32mINSERT INTO "vikings" ("name", "age", "weight", "body_fat", "residence", "diet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alex Aguilar"], ["age", 27], ["weight", 240.0], ["body_fat", 45.0], ["residence", "717 Red Tails Dr. Austin, TX 78704"], ["diet_id", 2], ["created_at", "2018-08-20 22:00:06.904528"], ["updated_at", "2018-08-20 22:00:06.904528"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mExercise Create (8.1ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "exercise_type", "time", "calories", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "bball"], ["exercise_type", "cardio"], ["time", 60], ["calories", 250.8], ["created_at", "2018-08-20 22:00:06.933025"], ["updated_at", "2018-08-20 22:00:06.933025"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mExercise Create (15.4ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "exercise_type", "time", "calories", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "running"], ["exercise_type", "cardio"], ["time", 45], ["calories", 200.8], ["created_at", "2018-08-20 22:00:06.960830"], ["updated_at", "2018-08-20 22:00:06.960830"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mVikingExercise Create (6.1ms)[0m  [1m[32mINSERT INTO "viking_exercises" ("viking_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["viking_id", 1], ["exercise_id", 2], ["created_at", "2018-08-20 22:00:07.017116"], ["updated_at", "2018-08-20 22:00:07.017116"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mVikingExercise Create (3.4ms)[0m  [1m[32mINSERT INTO "viking_exercises" ("viking_id", "exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["viking_id", 2], ["exercise_id", 1], ["created_at", "2018-08-20 22:00:07.029825"], ["updated_at", "2018-08-20 22:00:07.029825"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mViking Load (2.8ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mViking Load (1.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" ORDER BY "vikings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" ORDER BY "vikings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mExercise Load (1.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" INNER JOIN "viking_exercises" ON "exercises"."id" = "viking_exercises"."exercise_id" WHERE "viking_exercises"."viking_id" = ? LIMIT ?[0m  [["viking_id", 1], ["LIMIT", 11]]
+  [1m[36mViking Load (2.8ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" ORDER BY "vikings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" INNER JOIN "viking_exercises" ON "exercises"."id" = "viking_exercises"."exercise_id" WHERE "viking_exercises"."viking_id" = ? LIMIT ?[0m  [["viking_id", 1], ["LIMIT", 11]]
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" ORDER BY "vikings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" INNER JOIN "viking_exercises" ON "exercises"."id" = "viking_exercises"."exercise_id" WHERE "viking_exercises"."viking_id" = ? LIMIT ?[0m  [["viking_id", 1], ["LIMIT", 11]]
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" ORDER BY "vikings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDiet Load (1.3ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
