@@ -1,0 +1,2 @@
+class VikingsController < ApplicationController
+end

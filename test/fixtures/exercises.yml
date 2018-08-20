@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  time: 1
+  calories: 1
+  instruction_link: MyString
+
+two:
+  name: MyString
+  type: 
+  time: 1
+  calories: 1
+  instruction_link: MyString

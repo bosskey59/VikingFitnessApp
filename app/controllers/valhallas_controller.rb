@@ -1,0 +1,2 @@
+class ValhallasController < ApplicationController
+end
