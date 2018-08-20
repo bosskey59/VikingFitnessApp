@@ -7,6 +7,7 @@ class CreateVikings < ActiveRecord::Migration[5.2]
       t.float :body_fat
       t.string :residence
       t.float :calories
+      t.string :image_url
 
       t.belongs_to :diet
 
