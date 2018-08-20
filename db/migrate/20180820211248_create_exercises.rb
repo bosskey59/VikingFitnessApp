@@ -2,7 +2,7 @@ class CreateExercises < ActiveRecord::Migration[5.2]
   def change
     create_table :exercises do |t|
       t.string :name
-      t.string :type
+      t.string :exercise_type
       t.integer :time
       t.float :calories
       t.string :instruction_link

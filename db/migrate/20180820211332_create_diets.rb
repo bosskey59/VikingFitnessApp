@@ -4,7 +4,7 @@ class CreateDiets < ActiveRecord::Migration[5.2]
       t.float :carbs
       t.float :fat
       t.float :protein
-      t.string :type
+      t.string :diet_type
       t.float :calculated_calories
 
       t.timestamps
