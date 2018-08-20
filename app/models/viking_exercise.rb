@@ -1,4 +1,4 @@
 class VikingExercise < ApplicationRecord
 	belongs_to :viking
-	velongs_to :exercise
+	belongs_to :exercise
 end
