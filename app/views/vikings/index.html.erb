@@ -1,8 +1,10 @@
 <h2>All Vikings</h2>
 
+<% vikingsfixed = @vikings.select {|viking| viking.id != session[:signed_in_viking_id]} %>
 
 
-<% @vikings.each do |viking| %>
+
+<% vikingsfixed.each do |viking| %>
 	<li>
 		<%= link_to viking.name, viking %>
 	</li>
