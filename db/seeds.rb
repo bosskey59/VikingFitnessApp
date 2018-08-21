@@ -14,5 +14,5 @@ alex = Viking.create(name:"Alex Aguilar", age: 27, weight:240, body_fat: 45, res
 bball = Exercise.create(name:"bball", exercise_type:"cardio", time:60, calories:250.8)
 run = Exercise.create(name:"running", exercise_type:"cardio", time:45, calories:200.8)
 
-VikingExercise.create(viking:sean,exercise:run )
-VikingExercise.create(viking:alex,exercise:bball )
+VikingExercise.create(viking:sean,exercise:run)
+VikingExercise.create(viking:alex,exercise:bball)
