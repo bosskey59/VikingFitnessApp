@@ -6,4 +6,6 @@ class Viking < ApplicationRecord
 
 	has_many :viking_valhallas
 	has_many :valhallas, through: :viking_valhallas
+
+
 end
