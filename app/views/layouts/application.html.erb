@@ -10,6 +10,10 @@
   </head>
 
   <body>
+
+    <%= link_to 'Viking Sign', new_session_path%> <%= link_to 'New Viking', new_viking_path %>
+
+    <p>Welcome, <%= @logged_in_viking.name %></p>
     <%= yield %>
   </body>
 </html>
