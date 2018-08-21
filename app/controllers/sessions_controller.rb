@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
 
 
 	def destroy
-		sign_out
+		reset_session
 		redirect_to vikings_path
 	end
 
