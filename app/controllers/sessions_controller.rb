@@ -10,7 +10,12 @@ class SessionsController < ApplicationController
 			session[:signed_in_viking_id] = viking.id
 			redirect_to viking 
 		end
+	end
 
+
+	def destroy
+		sign_out
+		redirect_to vikings_path
 	end
 
 end
