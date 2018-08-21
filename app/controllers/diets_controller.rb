@@ -5,7 +5,7 @@ class DietsController < ApplicationController
 	end
 
 	def show 
-		@diet = Diet.find(params:[id])
+		@diet = Diet.find(params[:id])
 	end
 
 
