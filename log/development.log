@@ -7653,3 +7653,15 @@ Completed 200 OK in 2007ms (Views: 1938.6ms | ActiveRecord: 3.7ms)
 >>>>>>> alex
 
 
+Started GET "/exercises/1" for 127.0.0.1 at 2018-08-21 16:22:33 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 11763ms (Views: 11677.3ms | ActiveRecord: 2.3ms)
+
+
