@@ -1,5 +1,9 @@
 <h2><%= @viking.name %></h2>
 
-
+<br>
 
 <%= image_tag (@viking.image_url) %>
+
+<br>
+
+<%= link_to @viking.diet.diet_type, @viking.diet %>
