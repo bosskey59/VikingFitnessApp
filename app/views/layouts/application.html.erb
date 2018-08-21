@@ -13,6 +13,9 @@
 
     <%= link_to 'Viking Sign', new_session_path%> <%= link_to 'New Viking', new_viking_path %> 
 
+    <% if session[:signed_in_viking_id] %>
+    <%= button_to 'Viking Out', sessions_path, method: 'delete' %> 
+    <% end %>
 
     <p>Welcome, <%= @logged_in_viking.name %></p>
     <%= yield %>
