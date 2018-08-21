@@ -1,0 +1,9 @@
+<h2>All Vikings</h2>
+
+<% @vikings.each do |viking| %>
+	<li>
+		<%= link_to viking.name, viking %>
+	</li>
+	<br>
+	<% end %>
+</ul>

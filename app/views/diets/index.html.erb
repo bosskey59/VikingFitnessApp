@@ -1,0 +1,9 @@
+<h2>All Diets</h2>
+
+<% @diets.each do |diet| %>
+	<li>
+		<%= link_to diet.diet_type, diet %>
+	</li>
+	<br>
+	<% end %>
+</ul>
