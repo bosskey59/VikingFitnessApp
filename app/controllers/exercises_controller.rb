@@ -3,7 +3,7 @@ class ExercisesController < ApplicationController
 
 
   def index
-    @exercises = Excersice.all
+    @exercises = Exercise.all
   end
 
   def show
@@ -11,13 +11,19 @@ class ExercisesController < ApplicationController
   end
 
   def new
-    @exercise = Excersice.new
+    @exercise = Exercise.new(flash[:form_values])
   end
 
   def create
-    @exercise = Excersice.create(exercise_params)
-
-    redirect_to @exercise
+    @exercise = Exercise.new(exercise_params)
+    if @exercise.valid?
+      @exercise.save
+      redirect_to @exercise
+    else
+      flash[:error_message] = @exercise.errors.full_messages.join(', ')
+      flash[:form_values] = exercise_params
+      redirect_to new_exercise_path
+    end
   end
 
   def edit
@@ -25,9 +31,14 @@ class ExercisesController < ApplicationController
   end
 
   def update
-    @exercise.update(exercise_params)
+    if @exercise.update(exercise_params)
+      redirect_to @exercise
+    else
+      flash[:error_message] = @exercise.errors.full_messages.join(', ')
+      redirect_to edit_exercise_path
+    end
 
-    redirect_to @exercise
+
   end
 
   def destroy
@@ -44,7 +55,7 @@ class ExercisesController < ApplicationController
 
 
   def current_exercise
-    @exercise = Excersice.find(params[:id])
+    @exercise = Exercise.find(params[:id])
   end
 
 end

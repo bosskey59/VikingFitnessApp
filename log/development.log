@@ -252,6 +252,7 @@ Migrating to CreateVikingValhallas (20180820212320)
   [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" ORDER BY "vikings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mValhalla Load (0.1ms)[0m  [1m[34mSELECT  "valhallas".* FROM "valhallas" INNER JOIN "viking_valhallas" ON "valhallas"."id" = "viking_valhallas"."valhalla_id" WHERE "viking_valhallas"."viking_id" = ? LIMIT ?[0m  [["viking_id", 1], ["LIMIT", 11]]
   [1m[36mDiet Load (0.2ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" LIMIT ?[0m  [["LIMIT", 11]]
+<<<<<<< HEAD
 Started GET "/dragons" for 127.0.0.1 at 2018-08-21 11:55:24 -0500
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/hyprul/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
@@ -6855,5 +6856,800 @@ Processing by VikingsController#index as HTML
   ↳ app/views/vikings/index.html.erb:3
   Rendered vikings/index.html.erb within layouts/application (2.3ms)
 Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+=======
+Started GET "/exercises" for 127.0.0.1 at 2018-08-21 11:54:23 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ExercisesController#index as HTML
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ExercisesController::Excersice):
+  
+app/controllers/exercises_controller.rb:6:in `index'
+Started GET "/exercises" for 127.0.0.1 at 2018-08-21 11:55:05 -0500
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[36mExercise Load (0.9ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.erb:3
+  Rendered exercises/index.html.erb within layouts/application (66.4ms)
+Completed 200 OK in 3003ms (Views: 2970.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2018-08-21 11:55:19 -0500
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.erb:3
+  Rendered exercises/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 224ms (Views: 211.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2018-08-21 12:07:43 -0500
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[36mExercise Load (13.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.erb:3
+  Rendered exercises/index.html.erb within layouts/application (224.9ms)
+Completed 200 OK in 678ms (Views: 635.6ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/exercises/1" for 127.0.0.1 at 2018-08-21 12:07:48 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (8.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:47
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (111.7ms)
+Completed 500 Internal Server Error in 656ms (ActiveRecord: 8.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `exercise_type' for nil:NilClass):
+     5: t.string "instruction_link"
+     6: 
+     7: <h1> <%= @exercise.name %> </h1>
+     8: <p> <%= @exercies.exercise_type %> </p>
+     9: <p> <%= @exercies.time %> </p>
+    10: <p> <%= @exercies.calories %> </p>
+    11: <p> <%= @exercies.instruction_link %> </p>
+  
+app/views/exercises/show.html.erb:8:in `_app_views_exercises_show_html_erb__3080825196183106645_70114450166400'
+Started GET "/exercises/1" for 127.0.0.1 at 2018-08-21 12:08:30 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (1.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:47
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 152ms (Views: 127.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exercises/1" for 127.0.0.1 at 2018-08-21 12:08:53 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (0.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:47
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 116ms (Views: 108.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 13:48:59 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (367.2ms)
+Completed 200 OK in 519ms (Views: 489.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 13:49:43 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 165ms (Views: 146.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 13:52:33 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dcFdzUPawrYOQ/z6kxwviPVO8YpwZWzEOWCtFVRNFll8x+wr9CFzDaAQ+xoljOgLT8jK1sk8eVvqqHfhQkOiIg==", "exercise"=>{"name"=>"", "exercise_type"=>"", "time"=>"", "calories"=>"", "instruction_link"=>""}, "commit"=>"Create Exercise"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/exercises_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/exercises_controller.rb:18
+Redirected to http://localhost:3000/exercises
+Completed 200 OK in 101ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2018-08-21 13:52:34 -0500
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.erb:3
+  Rendered exercises/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 195ms (Views: 172.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 13:52:41 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 75ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 13:54:10 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 197ms (Views: 129.2ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 13:54:15 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RjPiY3gsF3x9SRyc8b4bqk1Gdgy6CkLfy8oJyrMCLWhPNVOFz9emx9MaG3xHLtwp98BNUANTV0AYAtM+pQyZEw==", "exercise"=>{"name"=>"hello", "exercise_type"=>"", "time"=>"", "calories"=>"", "instruction_link"=>""}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 106ms (Views: 98.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 13:58:45 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RjPiY3gsF3x9SRyc8b4bqk1Gdgy6CkLfy8oJyrMCLWhPNVOFz9emx9MaG3xHLtwp98BNUANTV0AYAtM+pQyZEw==", "exercise"=>{"name"=>"hello", "exercise_type"=>"", "time"=>"", "calories"=>"", "instruction_link"=>""}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 243ms (Views: 207.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 13:59:35 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RjPiY3gsF3x9SRyc8b4bqk1Gdgy6CkLfy8oJyrMCLWhPNVOFz9emx9MaG3xHLtwp98BNUANTV0AYAtM+pQyZEw==", "exercise"=>{"name"=>"hello", "exercise_type"=>"", "time"=>"", "calories"=>"", "instruction_link"=>""}, "commit"=>"Create Exercise"}
+Completed 500 Internal Server Error in 560ms (ActiveRecord: 3.4ms)
+
+
+  
+NameError (undefined local variable or method `dragon' for #<ExercisesController:0x007f8996792c38>):
+  
+app/controllers/exercises_controller.rb:23:in `create'
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:00:10 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RjPiY3gsF3x9SRyc8b4bqk1Gdgy6CkLfy8oJyrMCLWhPNVOFz9emx9MaG3xHLtwp98BNUANTV0AYAtM+pQyZEw==", "exercise"=>{"name"=>"hello", "exercise_type"=>"", "time"=>"", "calories"=>"", "instruction_link"=>""}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 240ms (Views: 192.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:00:13 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 95ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:00:48 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5vf2C/EkcpFquHccGwU3cJQpa6/1hPz0+suhXU2rnsLv8UftRt/DKsTrcPytlfDzLq9Q80zd6WspA3upW6UquQ==", "exercise"=>{"name"=>"", "exercise_type"=>"", "time"=>"", "calories"=>"", "instruction_link"=>""}, "commit"=>"Create Exercise"}
+Redirected to http://localhost:3000/exercises/new
+Completed 200 OK in 115ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:00:49 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (68.9ms)
+Completed 200 OK in 372ms (Views: 346.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:01:33 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tHc8rBUz5u0qVw1bVZqxOgLFMaarf3/RUb1e/jfz+pKAOJpfsDyJ5NujbR+YkRiKSC461berM6ANgBiPP6ZY2g==", "exercise"=>{"name"=>"helo", "exercise_type"=>"world", "time"=>"50", "calories"=>"0", "instruction_link"=>"djaf;lajgf"}, "commit"=>"Create Exercise"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/exercises_controller.rb:20
+  [1m[36mExercise Create (7.2ms)[0m  [1m[32mINSERT INTO "exercises" ("name", "exercise_type", "time", "calories", "instruction_link", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "helo"], ["exercise_type", "world"], ["time", 50], ["calories", 0.0], ["instruction_link", "djaf;lajgf"], ["created_at", "2018-08-21 19:01:33.442926"], ["updated_at", "2018-08-21 19:01:33.442926"]]
+  ↳ app/controllers/exercises_controller.rb:20
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/exercises_controller.rb:20
+Redirected to http://localhost:3000/exercises/3
+Completed 200 OK in 28ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/exercises/3" for 127.0.0.1 at 2018-08-21 14:01:33 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:52
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 373ms (Views: 346.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:01:56 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 208ms (Views: 192.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:08:41 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mD9YYfAiy5Vb/TratwtHSCI1ALDv5CdOS2XJmg6rLLiROemHR9l6LvWuPToBm4DLmLM77Fa9MtGYrRNuGKWYww==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"-20", "calories"=>"50", "instruction_link"=>"djaf;lajgf"}, "commit"=>"Create Exercise"}
+Redirected to http://localhost:3000/exercises/new
+Completed 200 OK in 57ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:08:42 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 467ms (Views: 459.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:11:08 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mDBPbt4X9JWzAraF2JTmTJvASvmpMrluGKWqVYfTmB6sf+mdexibnEL21sEVn0/80StBirXm9R9EmOwkj4Y6Vg==", "exercise"=>{"name"=>"hello", "exercise_type"=>"world", "time"=>"45", "calories"=>"-10", "instruction_link"=>"xc/kadfslk"}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 268ms (Views: 193.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:11:15 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 148ms (Views: 138.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:11:23 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (139.5ms)
+Completed 200 OK in 259ms (Views: 233.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:11:40 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tbGFcyB/ddBDQF9Q/7wQYo5SFadDucJOp5hcoFBzE0C8tzSVl4TEa+0TWLBJLNfhNNQu+/rg19F0UIZURn2nOw==", "exercise"=>{"name"=>"hello", "exercise_type"=>"cardio", "time"=>"-134", "calories"=>"0", "instruction_link"=>"fkjh.af;lah"}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 172ms (Views: 151.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:12:15 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 275ms (Views: 160.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:12:21 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PH2TwwJ3+sWrFwQxCWWq4R50FiVAkGfdNy0pB87EIw81eyIltYxLfgVEA9G/9W1ipPItefnJckLk5fPz2MqXdA==", "exercise"=>{"name"=>"", "exercise_type"=>"", "time"=>"-123", "calories"=>"", "instruction_link"=>""}, "commit"=>"Create Exercise"}
+Completed 500 Internal Server Error in 11295ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/exercises_controller.rb:24:in `create'
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:14:10 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (109.7ms)
+Completed 200 OK in 1483ms (Views: 1146.1ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:15:32 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (169.9ms)
+Completed 500 Internal Server Error in 556ms (ActiveRecord: 32.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    3: 
+    4: <%= form_with model: @exercise do |form| %>
+    5:   <%= form.label :name%>
+    6:   <%= form.text_field :name, value: session[:fields][:name]%>
+    7:   </br>
+    8:   <%= form.label :exercise_type%>
+    9:   <%= form.text_field :exercise_type%>
+  
+app/views/exercises/new.html.erb:6:in `block in _app_views_exercises_new_html_erb___3226640262311481694_70114424481200'
+app/views/exercises/new.html.erb:4:in `_app_views_exercises_new_html_erb___3226640262311481694_70114424481200'
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:17:21 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (138.8ms)
+Completed 200 OK in 1694ms (Views: 1320.3ms | ActiveRecord: 15.2ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:17:34 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PQ5Muv+Y8v2kRFuOquir3OUQMqET4fLGy4Um3w6tWn80CP1cSGNDRgoXXG4ceGxfX5YJ/aq451kYTfwrGKPuBA==", "exercise"=>{"name"=>"tim", "exercise_type"=>"", "time"=>"-32", "calories"=>"", "instruction_link"=>""}, "commit"=>"Create Exercise"}
+Redirected to http://localhost:3000/exercises/new
+Completed 200 OK in 181ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:17:34 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (164.8ms)
+Completed 200 OK in 1966ms (Views: 1920.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:18:02 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (124.0ms)
+Completed 200 OK in 1252ms (Views: 1213.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:19:00 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6K3So2zD+3+Hs6x5kgzNVfmU0zZJwviDZK5/2ALfW1GpAasOki+VlBNyVFQ2PS27WBoEGB+Hn3eWmMLdgXJFg==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"-10", "calories"=>"-16", "instruction_link"=>"qrlkjfqeljkfq"}, "commit"=>"Create Exercise"}
+Redirected to http://localhost:3000/exercises/new
+Completed 200 OK in 124ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:19:00 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (105.6ms)
+Completed 200 OK in 1356ms (Views: 1317.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:43:15 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lLIYmY+3lg9H89L20X0DbrgWins7LTYWpTjBa9enp/Sg/b5qKrj5BrYHsrIcdqre8v2BCCf5emf5BYca3/IFvA==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"-10", "calories"=>"1", "instruction_link"=>"xc/kadfslk"}, "commit"=>"Create Exercise"}
+Redirected to http://localhost:3000/exercises/new
+Completed 200 OK in 500ms (ActiveRecord: 21.7ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:43:18 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (156.5ms)
+Completed 200 OK in 1541ms (Views: 1464.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:44:22 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5PHnGrQee4USIk2QtJOVa+z7bq/fIfzyMhsqSFky9ljQvkHpEREUjOPWLdR5mDzbphBl3MP1sINuJmw5UWdUEA==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"-10", "calories"=>"34", "instruction_link"=>"dslfkf"}, "commit"=>"Create Exercise"}
+Redirected to http://localhost:3000/exercises/new
+Completed 200 OK in 452ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:44:25 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (117.7ms)
+Completed 200 OK in 1497ms (Views: 1454.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:54:32 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (195.3ms)
+Completed 500 Internal Server Error in 680ms (ActiveRecord: 35.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    3: 
+    4: <%= form_with model: @exercise do |form| %>
+    5:   <%= form.label :name%>
+    6:   <%= form.text_field :name, value: flash[:exercise][:name]%>
+    7:   </br>
+    8:   <%= form.label :exercise_type%>
+    9:   <%= form.text_field :exercise_type, value: flash[:exercise][:exercise_type] %>
+  
+app/views/exercises/new.html.erb:6:in `block in _app_views_exercises_new_html_erb___3226640262311481694_70114482943520'
+app/views/exercises/new.html.erb:4:in `_app_views_exercises_new_html_erb___3226640262311481694_70114482943520'
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 14:54:50 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (162.5ms)
+Completed 200 OK in 1717ms (Views: 1680.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:55:10 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yo5UJOC66lYzhj0k2mXPnW9qh5kR7d1AXzJmMgn8+inDiOXCV0Fb7Z3VOsRs9Qge1ey8xai0yN+M+rzGH/JOUg==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"-12", "calories"=>"5", "instruction_link"=>"5"}, "commit"=>"Create Exercise"}
+Redirected to http://localhost:3000/exercises/new
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/exercises_controller.rb:25:in `create'
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 14:55:17 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yo5UJOC66lYzhj0k2mXPnW9qh5kR7d1AXzJmMgn8+inDiOXCV0Fb7Z3VOsRs9Qge1ey8xai0yN+M+rzGH/JOUg==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"-12", "calories"=>"5", "instruction_link"=>"5"}, "commit"=>"Create Exercise"}
+Redirected to http://localhost:3000/exercises/new
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/exercises_controller.rb:25:in `create'
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 15:01:12 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (151.3ms)
+Completed 200 OK in 2165ms (Views: 1549.7ms | ActiveRecord: 20.8ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 15:02:03 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"golKYLXEWyCtkxGKJRbY8NvUJ/Jzu9dmgE9KbvDuiLSLj/uGAj/qmwPAFmqThh9zYVIcrsriwvlTh5Ca5uA8zw==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"10", "calories"=>"-5", "instruction_link"=>"s.md"}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (137.5ms)
+Completed 200 OK in 1724ms (Views: 1602.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 15:02:29 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"golKYLXEWyCtkxGKJRbY8NvUJ/Jzu9dmgE9KbvDuiLSLj/uGAj/qmwPAFmqThh9zYVIcrsriwvlTh5Ca5uA8zw==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"10", "calories"=>"-5", "instruction_link"=>"s.md"}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (159.4ms)
+Completed 200 OK in 2476ms (Views: 2353.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 15:06:14 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"golKYLXEWyCtkxGKJRbY8NvUJ/Jzu9dmgE9KbvDuiLSLj/uGAj/qmwPAFmqThh9zYVIcrsriwvlTh5Ca5uA8zw==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"10", "calories"=>"-5", "instruction_link"=>"s.md"}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (167.1ms)
+Completed 200 OK in 2212ms (Views: 1599.3ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 15:06:27 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"golKYLXEWyCtkxGKJRbY8NvUJ/Jzu9dmgE9KbvDuiLSLj/uGAj/qmwPAFmqThh9zYVIcrsriwvlTh5Ca5uA8zw==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"10", "calories"=>"-5", "instruction_link"=>"s.md"}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (125.8ms)
+Completed 200 OK in 1413ms (Views: 1317.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 15:06:47 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (162.8ms)
+Completed 200 OK in 2148ms (Views: 1524.3ms | ActiveRecord: 14.3ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 15:07:16 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i7fx/Nw6YxE3qT46Y69R98Xbcwh8mv9o/I14Yh9JOCuCsUAaa8HSqpn6OdrVP5Z0f11IVMXD6vcvRaKWCUeMUA==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"-10", "calories"=>"77", "instruction_link"=>"dslfkf"}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (131.7ms)
+Completed 200 OK in 1476ms (Views: 1374.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 15:09:52 -0500
+  
+SyntaxError (/Users/AlejandroAguilar/Development/sandbox/VikingFitnessApp/app/controllers/exercises_controller.rb:25: syntax error, unexpected '=', expecting ']'
+      flash.now[:notice = @exercise.errors.full_messages.join(', ')
+                         ^):
+  
+app/controllers/exercises_controller.rb:25: syntax error, unexpected '=', expecting ']'
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 15:10:15 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (190.3ms)
+Completed 200 OK in 2645ms (Views: 1975.7ms | ActiveRecord: 23.6ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 15:10:31 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SrZnF6pJqfOZkalNRqN9MA71Kup5XuGMljht4vFDImdDsNbxHbIYSDfCrq3wM7qztHMRtsAH9BNF8LcW502WHA==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"-120", "calories"=>"0", "instruction_link"=>"wd;lkewf"}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (143.3ms)
+Completed 200 OK in 1514ms (Views: 1378.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 15:10:38 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SrZnF6pJqfOZkalNRqN9MA71Kup5XuGMljht4vFDImdDsNbxHbIYSDfCrq3wM7qztHMRtsAH9BNF8LcW502WHA==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"-120", "calories"=>"0", "instruction_link"=>"wd;lkewf"}, "commit"=>"Create Exercise"}
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (153.8ms)
+Completed 200 OK in 1482ms (Views: 1342.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 15:17:38 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (182.2ms)
+Completed 200 OK in 1902ms (Views: 1485.9ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 15:18:03 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vR3vahYpy23a0LUO/d5du4eaUk62k+JupOR5v6qZmz+0G16ModJ61nSDsu5LTpo4PRxpEg/K9/F3LKNLvJcvRA==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"60", "calories"=>"-10", "instruction_link"=>"djaf;lajgf"}, "commit"=>"Create Exercise"}
+Redirected to http://localhost:3000/exercises/new
+Completed 200 OK in 118ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 15:18:03 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (170.9ms)
+Completed 200 OK in 2129ms (Views: 2089.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2018-08-21 15:18:41 -0500
+Processing by ExercisesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IX2gRAZDOQSYWAcQRbja7k9sgD/uoCc2BiXe7eTx9eAVMga3o0xWDWmsZ1SIs3NeBYeLTPJ0a0daGJic7KRXqA==", "exercise"=>{"name"=>"frisbee", "exercise_type"=>"cardio", "time"=>"60", "calories"=>"-10", "instruction_link"=>"djaf;lajgf"}, "commit"=>"Create Exercise"}
+Redirected to http://localhost:3000/exercises/new
+Completed 200 OK in 465ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 15:18:44 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (159.3ms)
+Completed 200 OK in 2546ms (Views: 2485.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/new" for 127.0.0.1 at 2018-08-21 15:18:57 -0500
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (147.3ms)
+Completed 200 OK in 1351ms (Views: 1322.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/edit" for 127.0.0.1 at 2018-08-21 15:21:44 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mExercise Load (2.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+Completed 404 Not Found in 412ms (ActiveRecord: 50.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Exercise with 'id'=edit):
+  
+app/controllers/exercises_controller.rb:58:in `current_exercise'
+Started GET "/exercises" for 127.0.0.1 at 2018-08-21 15:26:26 -0500
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[36mExercise Load (4.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.erb:3
+  Rendered exercises/index.html.erb within layouts/application (170.3ms)
+Completed 200 OK in 1398ms (Views: 1355.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/exercises/3" for 127.0.0.1 at 2018-08-21 15:26:31 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (4.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 2251ms (Views: 2180.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/exercises/3/edit" for 127.0.0.1 at 2018-08-21 15:26:38 -0500
+Processing by ExercisesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (2.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/edit.html.erb within layouts/application
+  Rendered exercises/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1183ms (Views: 1132.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/exercises/3/edit" for 127.0.0.1 at 2018-08-21 15:27:23 -0500
+Processing by ExercisesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (2.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/edit.html.erb within layouts/application
+  Rendered exercises/edit.html.erb within layouts/application (129.5ms)
+Completed 200 OK in 1226ms (Views: 1165.7ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/exercises/3" for 127.0.0.1 at 2018-08-21 15:27:54 -0500
+Processing by ExercisesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IsQF7RlljmlJa2KyAAaXayyFAemTEl/92XwoUc8s/ckrwrQLrp4/0uc4ZVK2llDolgM6tSpLSmIKtPKl2SJJsg==", "exercise"=>{"name"=>"helo", "exercise_type"=>"world", "time"=>"50", "calories"=>"0.0", "instruction_link"=>"hello_world"}, "commit"=>"Update Exercise", "id"=>"3"}
+  [1m[36mExercise Load (1.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/exercises_controller.rb:34
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/exercises_controller.rb:34
+Redirected to http://localhost:3000/exercises/3/edit
+Completed 200 OK in 127ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/exercises/3/edit" for 127.0.0.1 at 2018-08-21 15:27:54 -0500
+Processing by ExercisesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (1.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/edit.html.erb within layouts/application
+  Rendered exercises/edit.html.erb within layouts/application (133.8ms)
+Completed 200 OK in 1891ms (Views: 1817.1ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/exercises/3" for 127.0.0.1 at 2018-08-21 15:28:11 -0500
+Processing by ExercisesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h3XvinFUYY5A1k+mitTb+9bz9ghBWzja1uWVzwjJU5CEKl1RACcTJJ2mav4byapC2c/Xe++2RtKlKZdOjnC0MA==", "exercise"=>{"name"=>"helo", "exercise_type"=>"world", "time"=>"50", "calories"=>"1", "instruction_link"=>"hello_world"}, "commit"=>"Update Exercise", "id"=>"3"}
+  [1m[36mExercise Load (1.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/exercises_controller.rb:34
+  [1m[36mExercise Update (9.2ms)[0m  [1m[33mUPDATE "exercises" SET "calories" = ?, "instruction_link" = ?, "updated_at" = ? WHERE "exercises"."id" = ?[0m  [["calories", 1.0], ["instruction_link", "hello_world"], ["updated_at", "2018-08-21 20:28:11.593619"], ["id", 3]]
+  ↳ app/controllers/exercises_controller.rb:34
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/exercises_controller.rb:34
+Redirected to http://localhost:3000/exercises/3
+Completed 200 OK in 199ms (ActiveRecord: 15.4ms)
+
+
+Started GET "/exercises/3" for 127.0.0.1 at 2018-08-21 15:28:11 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (1.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 2041ms (Views: 1987.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/exercises/3/edit" for 127.0.0.1 at 2018-08-21 15:35:59 -0500
+Processing by ExercisesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (3.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/edit.html.erb within layouts/application
+  Rendered exercises/_form.html.erb (134.4ms)
+  Rendered exercises/edit.html.erb within layouts/application (158.4ms)
+Completed 200 OK in 1426ms (Views: 1349.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/exercises/3/edit" for 127.0.0.1 at 2018-08-21 15:36:24 -0500
+Processing by ExercisesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (3.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/edit.html.erb within layouts/application
+  Rendered exercises/_form.html.erb (120.9ms)
+  Rendered exercises/edit.html.erb within layouts/application (134.7ms)
+Completed 200 OK in 2173ms (Views: 2106.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/exercises/3/edit" for 127.0.0.1 at 2018-08-21 15:37:09 -0500
+Processing by ExercisesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (6.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/edit.html.erb within layouts/application
+  Rendered exercises/_form.html.erb (220.2ms)
+  Rendered exercises/edit.html.erb within layouts/application (242.5ms)
+Completed 200 OK in 2125ms (Views: 2037.3ms | ActiveRecord: 6.2ms)
+
+
+Started PATCH "/exercises/3" for 127.0.0.1 at 2018-08-21 15:37:18 -0500
+Processing by ExercisesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fCDxtwUGka39PdS87QrbZ4Bg0MI6xXv9z1/dPgPQ6GJ1JkBRsv0gFlNu01xbmhzkOubrnoOcbmIclwfKFd5cGQ==", "exercise"=>{"name"=>"helo", "exercise_type"=>"world", "time"=>"50", "calories"=>"-2", "instruction_link"=>"hello_world"}, "commit"=>"Update Exercise", "id"=>"3"}
+  [1m[36mExercise Load (3.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/exercises_controller.rb:34
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/exercises_controller.rb:34
+Redirected to http://localhost:3000/exercises/3/edit
+Completed 200 OK in 147ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/exercises/3/edit" for 127.0.0.1 at 2018-08-21 15:37:19 -0500
+Processing by ExercisesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (2.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/edit.html.erb within layouts/application
+  Rendered exercises/_form.html.erb (168.8ms)
+  Rendered exercises/edit.html.erb within layouts/application (200.3ms)
+Completed 200 OK in 2650ms (Views: 2585.0ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/exercises/3" for 127.0.0.1 at 2018-08-21 15:37:36 -0500
+Processing by ExercisesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUoqVv4bjWhiNURra6Zd15iTvkHx+iLToHVhyIW1UUUiFZiNj2j/wr9FYTP6uyxul6+fMl8XXNvTuWNJAwy25Q==", "exercise"=>{"name"=>"helo", "exercise_type"=>"world", "time"=>"50", "calories"=>"5", "instruction_link"=>"hello_world"}, "commit"=>"Update Exercise", "id"=>"3"}
+  [1m[36mExercise Load (5.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/exercises_controller.rb:34
+  [1m[36mExercise Update (10.9ms)[0m  [1m[33mUPDATE "exercises" SET "calories" = ?, "updated_at" = ? WHERE "exercises"."id" = ?[0m  [["calories", 5.0], ["updated_at", "2018-08-21 20:37:36.430988"], ["id", 3]]
+  ↳ app/controllers/exercises_controller.rb:34
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/exercises_controller.rb:34
+Redirected to http://localhost:3000/exercises/3
+Completed 200 OK in 206ms (ActiveRecord: 21.6ms)
+
+
+Started GET "/exercises/3" for 127.0.0.1 at 2018-08-21 15:37:36 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (33.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 2300ms (Views: 2117.4ms | ActiveRecord: 33.6ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2018-08-21 15:37:47 -0500
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[36mExercise Load (3.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.erb:3
+  Rendered exercises/index.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 1487ms (Views: 1446.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/exercises/1" for 127.0.0.1 at 2018-08-21 15:37:59 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (4.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 1794ms (Views: 1734.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/exercises/1" for 127.0.0.1 at 2018-08-21 15:39:04 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (5.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (5753.7ms)
+Completed 500 Internal Server Error in 5843ms (ActiveRecord: 5.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `exercise_type' for #<#<Class:0x007f89924ff678>:0x007f8992e69df8>
+Did you mean?  exercise_path
+               exercises_path
+               exercise_url):
+    3: <p> <%= @exercise.time %> </p>
+    4: <p> <%= @exercise.calories %> </p>
+    5: <p> <%= @exercise.instruction_link %> </p>
+    6: <p>  <%= link_to "Back to exercise", exercise_type %> </p>
+  
+app/views/exercises/show.html.erb:6:in `_app_views_exercises_show_html_erb__3080825196183106645_70114451212400'
+Started GET "/exercises/1" for 127.0.0.1 at 2018-08-21 15:39:30 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (3.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 1326ms (Views: 1238.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2018-08-21 15:39:34 -0500
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[36mExercise Load (2.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.erb:3
+  Rendered exercises/index.html.erb within layouts/application (50.7ms)
+Completed 200 OK in 1647ms (Views: 1618.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/exercises/1" for 127.0.0.1 at 2018-08-21 15:39:38 -0500
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (3.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:58
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/show.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 2007ms (Views: 1938.6ms | ActiveRecord: 3.7ms)
+>>>>>>> alex
 
 
