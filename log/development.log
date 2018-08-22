@@ -9493,3 +9493,571 @@ Processing by ValhallasController#index as HTML
 Completed 200 OK in 490ms (Views: 30.4ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:07:09 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hyprul/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 708ms (Views: 283.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:11:04 -0500
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 191ms (Views: 41.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:12:08 -0500
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 179ms (Views: 28.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:12:53 -0500
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 471ms (Views: 23.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:13:05 -0500
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 554ms (Views: 28.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:13:28 -0500
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 370ms (Views: 30.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:14:10 -0500
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 365ms (Views: 29.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:15:37 -0500
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3413ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:16:45 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:17:39 -0500
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 419ms (Views: 29.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:18:27 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:19:09 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 40ms (Views: 34.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:19:11 -0500
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 351ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-08-22 17:20:39 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:20:40 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 42ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:21:32 -0500
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 376ms (Views: 37.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-08-22 17:21:38 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:21:39 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:22:36 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 51ms (Views: 46.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vikings/12" for 127.0.0.1 at 2018-08-22 17:22:37 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.2ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 81ms (Views: 75.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:22:39 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 46ms (Views: 40.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/vikings/16" for 127.0.0.1 at 2018-08-22 17:22:40 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.2ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 50ms (Views: 44.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:22:41 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 49ms (Views: 43.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vikings/17" for 127.0.0.1 at 2018-08-22 17:22:42 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:22:43 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vikings/15" for 127.0.0.1 at 2018-08-22 17:22:43 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:22:44 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vikings/13" for 127.0.0.1 at 2018-08-22 17:22:45 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:22:46 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vikings/12" for 127.0.0.1 at 2018-08-22 17:22:47 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:22:48 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vikings/13" for 127.0.0.1 at 2018-08-22 17:22:49 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.2ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 27.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:22:51 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2018-08-22 17:22:54 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DRflBfahAQzewdvqUdCUgjA/VfaZ/V/sqLd9/1KcroMQ/iNgHwzMAXAm2vJkMIs1TPh00PHAD7eFlLxp32LYqg=="}
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/vikings
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:22:54 -0500
+Processing by VikingsController#index as HTML
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 42ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/vikings/13" for 127.0.0.1 at 2018-08-22 17:23:24 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 46ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-08-22 17:24:13 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vikings/new" for 127.0.0.1 at 2018-08-22 17:24:13 -0500
+Processing by VikingsController#new as HTML
+  Rendering vikings/new.html.erb within layouts/application
+  [1m[36mDiet Load (0.2ms)[0m  [1m[34mSELECT "diets".* FROM "diets"[0m
+  ↳ app/views/vikings/new.html.erb:32
+  Rendered vikings/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:24:15 -0500
+Processing by VikingsController#index as HTML
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 44ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/vikings/17" for 127.0.0.1 at 2018-08-22 17:24:16 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:24:17 -0500
+Processing by VikingsController#index as HTML
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vikings/15" for 127.0.0.1 at 2018-08-22 17:24:18 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:24:19 -0500
+Processing by VikingsController#index as HTML
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/vikings/16" for 127.0.0.1 at 2018-08-22 17:24:20 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 45ms (Views: 39.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:24:21 -0500
+Processing by VikingsController#index as HTML
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vikings/14" for 127.0.0.1 at 2018-08-22 17:24:22 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:24:24 -0500
+Processing by VikingsController#index as HTML
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vikings/13" for 127.0.0.1 at 2018-08-22 17:24:25 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:57
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:11
+  Rendered vikings/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:24:26 -0500
+Processing by VikingsController#index as HTML
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-08-22 17:24:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vikings/new" for 127.0.0.1 at 2018-08-22 17:24:30 -0500
+Processing by VikingsController#new as HTML
+  Rendering vikings/new.html.erb within layouts/application
+  [1m[36mDiet Load (0.2ms)[0m  [1m[34mSELECT "diets".* FROM "diets"[0m
+  ↳ app/views/vikings/new.html.erb:32
+  Rendered vikings/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-22 17:24:32 -0500
+Processing by VikingsController#index as HTML
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:3
+  Rendered vikings/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:26:16 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hyprul/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ValhallasController#index as HTML
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 636ms (Views: 260.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:27:53 -0500
+Processing by ValhallasController#index as HTML
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 511ms (Views: 61.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-22 17:28:37 -0500
+Processing by ValhallasController#index as HTML
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 508ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+

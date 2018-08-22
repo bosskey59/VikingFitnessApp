@@ -4,7 +4,7 @@ class ValhallasController < ApplicationController
   def index
     @client = GooglePlaces::Client.new('AIzaSyB2xEt9jySPpCNFawQAy7kDg3s_7JrM1NU')
     @valhallas = Valhalla.all
-    @temps = @client.spots(-33.8670522, 151.1957362, :types => 'restaurant')
+    @temps = @client.spots(45.4642, 9.1900, :types => ['gym', 'park'])
   end
 
 
