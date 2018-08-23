@@ -2,8 +2,11 @@ class ValhallasController < ApplicationController
   before_action :current_valhalla, only: [:show, :edit, :update, :destroy]
 
   def index
+    @client = GooglePlaces::Client.new('AIzaSyB2xEt9jySPpCNFawQAy7kDg3s_7JrM1NU')
     @valhallas = Valhalla.all
+    @temps = @client.spots(45.4642, 9.1900, :types => ['gym', 'park'])
   end
+
 
   def show
 
