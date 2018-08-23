@@ -29,3 +29,6 @@ heahmund = Viking.create(name: "Bishop Heahmund", age: 40, weight: 190, body_fat
 VikingExercise.create(viking:sean,exercise:run)
 VikingExercise.create(viking:alex,exercise:bball)
 
+
+
+#need to reseed with password attr's.

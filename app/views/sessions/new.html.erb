@@ -3,6 +3,12 @@
 <%= form_with url: sessions_path do | form |%>
     <label>Name: </label>
     <%= form.text_field :name %>
-    <%= form.submit %>
+    <br>
+    
+    <%= form.label :password %>
+	<%= form.password_field :password %>
+	<br>
+
+	<%= form.submit %>
     
 <% end %>

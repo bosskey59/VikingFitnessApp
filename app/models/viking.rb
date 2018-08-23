@@ -1,4 +1,7 @@
 class Viking < ApplicationRecord
+	
+	has_secure_password
+
 	belongs_to :diet
 
 	has_many :viking_exercises
@@ -8,6 +11,7 @@ class Viking < ApplicationRecord
 	has_many :valhallas, through: :viking_valhallas
 
 	validates :name, presence: true
+	validates :password, presence: true, confirmation: true
 
 
 	def total_calories
