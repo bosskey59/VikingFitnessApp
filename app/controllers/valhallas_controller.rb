@@ -4,7 +4,7 @@ class ValhallasController < ApplicationController
   def index
     @client = GooglePlaces::Client.new(ENV['my_api_key'])
     @valhallas = Valhalla.all
-    @temps = @client.spots(45.4642, 9.1900, :types => ['gym', 'park'])
+    @temps = @client.spots_by_query("#{@logged_in_viking.residence}", :types => ['gym', 'park'], detail: true)
   end
 
 

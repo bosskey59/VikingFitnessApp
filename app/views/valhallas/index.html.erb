@@ -3,17 +3,19 @@
   height="450"
   frameborder="0" style="border:0"
   src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['my_api_key'] %>
-    &q=Milan,Italy" allowfullscreen>
+    &q=<%= @logged_in_viking.residence %>" allowfullscreen>
 </iframe>
 
-<br><!-- 
-
+<br>
+<!-- 
 <%= @temps %>
 
  -->
-<ul>
-
+ <br>
+ <h2>Valhallas In <%= @logged_in_viking.name%>'s Vicinity</h2>
+ 
+<ul class="list-group list-group-flush">
 <% @temps.each do |location| %>
-	<li><%= location.name %></li>
+	<li class="list-group-item"><%= link_to location.name, location.website, target: :_blank %></li>
 <% end %>
 </ul>

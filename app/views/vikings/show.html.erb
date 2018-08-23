@@ -44,3 +44,9 @@ Diet: <%= link_to @viking.diet.diet_type, @viking.diet %>
   </tr>
 
 </table>
+
+
+<% if @logged_in_viking.name == "Ivar the Boneless" && @viking.name == "Ivar the Boneless" %>
+  <%= image_tag ('https://78.media.tumblr.com/b03e3d641264d641a21f448c3697f78e/tumblr_p1gn0ajGLH1qc7d45o1_500.gif') %>
+
+<% end %>
