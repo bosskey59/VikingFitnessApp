@@ -1,6 +1,8 @@
 <h1> <%= @exercise.name %> </h1>
-<p> <%= @exercise.exercise_type %> </p>
-<p> <%= @exercise.time %> </p>
-<p> <%= @exercise.calories %> </p>
+<p> Exercise Type: <%= @exercise.exercise_type %> </p>
+<p> Time: <%= @exercise.time %> </p>
+<p> Calories: <%= @exercise.calories %> </p>
 <p> <%= @exercise.instruction_link %> </p>
+<p><%= link_to "Add Exercise", viking_exercises_path, method:'create' %> </p>
+</br>
 <p>  <%= link_to "Back to exercises", exercises_path %> </p>

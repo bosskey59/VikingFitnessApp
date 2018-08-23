@@ -9,4 +9,19 @@ class Viking < ApplicationRecord
 
 	validates :name, presence: true
 
+
+	def total_calories
+		self.exercises.sum(:calories)
+	end
+
+	def total_time
+		self.exercises.sum(:time)
+	end
+
+	def my_viking_exercises
+		VikingExercise.all.select do |viking_exercise|
+			viking_exercise.viking == self
+		end
+	end
+
 end

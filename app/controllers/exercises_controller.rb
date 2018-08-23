@@ -7,7 +7,7 @@ class ExercisesController < ApplicationController
   end
 
   def show
-
+    session[:current_exercise_id] = @exercise.id
   end
 
   def new
