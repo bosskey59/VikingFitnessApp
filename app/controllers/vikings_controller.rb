@@ -16,6 +16,10 @@ class VikingsController < ApplicationController
 	end
 
 	def edit
+		#byebug
+		if params[:id].to_i != @logged_in_viking.id
+			render :show
+		end
 	
 	end
 
