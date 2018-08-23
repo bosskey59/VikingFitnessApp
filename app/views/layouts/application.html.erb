@@ -19,10 +19,10 @@
   <div class="collapse navbar-collapse" id="navbarsExample02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <%= link_to "Viking's Home", @logged_in_viking, {class:'nav-link'} %>
+        <%= link_to "Exercises", exercises_path, {class:'nav-link'} %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <%= link_to "Diets", diets_path, {class:'nav-link'} %>
       </li>
     </ul>
     <div class=" my-2 my-md-0">
@@ -48,11 +48,6 @@
     <%= yield %>
 
 
-    <br>
-    <br>
-
-
-    <%= link_to "All Vikings", vikings_path %>
 
   </body>
 </html>

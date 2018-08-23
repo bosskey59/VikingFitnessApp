@@ -1,4 +1,8 @@
-<h2>All Other Vikings</h2>
+<% if session[:signed_in_viking_id] %>
+	<h2>All Other Vikings</h2>
+<% else %>
+	<h2>All Vikings</h2>
+<% end %>
 
 <% vikingsfixed = @vikings.select {|viking| viking.id != session[:signed_in_viking_id]} %>
 

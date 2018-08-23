@@ -1,6 +1,6 @@
-<h1>Exercises :</h1>
-<ul>
+<h2>Exercises :</h2>
+<ul class="list-group list-group-flush">
   <% @exercises.each do |exercise| %>
-    <li> <%= link_to exercise.name, exercise %> </li>
+    <li class="list-group-item"> <%= link_to exercise.name, exercise %> </li>
   <% end %>
 </ul>

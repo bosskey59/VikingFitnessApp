@@ -16,7 +16,7 @@ class VikingsController < ApplicationController
 	end
 
 	def edit
-	
+
 	end
 
 
@@ -26,7 +26,8 @@ class VikingsController < ApplicationController
 		if @viking.save
 			redirect_to @viking
 		else
-			render :new
+			flash[:error_message] = @viking.errors.full_messages.join(', ')
+			redirect_to new_viking_path
 		end
 	end
 
@@ -35,7 +36,8 @@ class VikingsController < ApplicationController
 		if @viking.update(viking_params)
 			redirect_to @viking
 		else
-			render :edit
+			flash[:error_message] = @viking.errors.full_messages.join(', ')
+			redirect_to edit_viking_path
 		end
 	end
 
