@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_20_212320) do
+ActiveRecord::Schema.define(version: 2018_08_23_181651) do
 
   create_table "diets", force: :cascade do |t|
     t.float "carbs"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 2018_08_20_212320) do
     t.integer "diet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
     t.index ["diet_id"], name: "index_vikings_on_diet_id"
   end
 

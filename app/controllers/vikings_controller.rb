@@ -1,7 +1,7 @@
 class VikingsController < ApplicationController
 
 	before_action :current_viking, only: [:show, :edit, :update, :destroy]
-
+	before_action :redirect_if_not_logged_in, only: [:index]
 
 	def index
 		@vikings = Viking.all
@@ -16,6 +16,10 @@ class VikingsController < ApplicationController
 	end
 
 	def edit
+		#byebug
+		if params[:id].to_i != @logged_in_viking.id
+			render :show
+		end
 
 	end
 
@@ -51,7 +55,7 @@ class VikingsController < ApplicationController
 	private
 
 	def viking_params
-		params.require(:viking).permit(:name, :age, :weight, :body_fat, :residence, :calories, :image_url, :diet_id, exercise_ids:[], valhalla_ids:[])
+		params.require(:viking).permit(:name, :password, :password_confirmation, :age, :weight, :body_fat, :residence, :calories, :image_url, :diet_id, exercise_ids:[], valhalla_ids:[])
 	end
 
 
