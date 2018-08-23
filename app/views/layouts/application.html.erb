@@ -9,21 +9,48 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <a class="navbar-brand" href="/vikings"> <img class="img-fluid" src="https://static.thenounproject.com/png/27175-200.png"></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Viking's Home", @logged_in_viking, {class:'nav-link'} %>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+    <div class=" my-2 my-md-0">
+      <% if session[:signed_in_viking_id] %>
+        <%= link_to "Viking's Home", @logged_in_viking, {class:'btn btn-secondary '} %>
+        <%= link_to 'Viking Out', sessions_path, {method: 'delete', class:'btn btn-primary '} %>
+      <% else %>
+        <%= link_to "New Viking", new_viking_path, {class:'btn btn-secondary '} %>
+        <%= link_to 'Viking Log In', new_session_path, {class:'btn btn-primary '} %>
+      <% end %>
+      <!-- <input class="form-control" type="text" placeholder="Search"> -->
+    </div>
+  </div>
+</nav>
+
   <body class="container">
 
-    <%= link_to 'Viking Sign', new_session_path%> <%= link_to 'New Viking', new_viking_path %> 
 
     <% if session[:signed_in_viking_id] %>
-    <%= button_to 'Viking Out', sessions_path, method: 'delete' %> 
+      <p>Welcome, <%= @logged_in_viking.name %></p>
     <% end %>
 
-    <p>Welcome, <%= @logged_in_viking.name %></p>
     <%= yield %>
-  
+
 
     <br>
     <br>
-    
+
 
     <%= link_to "All Vikings", vikings_path %>
 

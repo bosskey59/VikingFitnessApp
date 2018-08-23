@@ -1,11 +1,46 @@
 <h2><%= @viking.name %></h2>
 
-<br>
+</br>
 
 <%= image_tag (@viking.image_url) %>
 
-<br>
+</br>
 
-<br>
+</br>
 
 Diet: <%= link_to @viking.diet.diet_type, @viking.diet %>
+
+</br>
+</br>
+
+<h4><%= link_to"Exercises:", exercises_path %></h4>
+<table class="table">
+  <tr>
+    <th>Exercise</th>
+    <th>Calories Burned</th>
+    <th>Elapsed Time</th>
+  </tr>
+  <% @viking.my_viking_exercises.each do |viking_exercise| %>
+  <tr>
+    <td><%= link_to viking_exercise.exercise_name, viking_exercise.exercise %> </td>
+    <td><%= viking_exercise.exercise_calories %></td>
+    <td><%= viking_exercise.exercise_time %></td>
+    <% if @viking.id == session[:signed_in_viking_id] %>
+      <td>
+        <form method="post" action= <%= destroy_viking_exercises_path %> >
+          <input type="hidden" name="_method" value="delete">
+          <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+          <input type="hidden" name="viking_exercise_id" value="<%=viking_exercise.id%>">
+          <input class="btn-secondary" value="Delete" type="submit">
+        </form>
+      </td>
+      <% end %>
+  </tr>
+  <% end %>
+  <tr class="font-weight-bold" >
+    <td><%= "Total" %> </td>
+    <td><%= @viking.total_calories %></td>
+    <td><%= @viking.total_time %></td>
+  </tr>
+
+</table>
