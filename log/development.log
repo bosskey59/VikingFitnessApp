@@ -44856,3 +44856,378 @@ Processing by SessionsController#new as HTML
   Rendering sessions/new.html.erb within layouts/application
   Rendered sessions/new.html.erb within layouts/application (2.9ms)
 Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+Started GET "/vikings" for 127.0.0.1 at 2018-08-24 11:32:18 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.5ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:7
+  Rendered vikings/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 827ms (Views: 699.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/vikings/15" for 127.0.0.1 at 2018-08-24 11:32:37 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (1.8ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mViking Load (1.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:67
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.6ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:20
+  [1m[36mVikingExercise Load (0.6ms)[0m  [1m[34mSELECT "viking_exercises".* FROM "viking_exercises"[0m
+  ↳ app/models/viking.rb:49
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.6ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT SUM("exercises"."calories") FROM "exercises" INNER JOIN "viking_exercises" ON "exercises"."id" = "viking_exercises"."exercise_id" WHERE "viking_exercises"."viking_id" = ?[0m  [["viking_id", 15]]
+  ↳ app/models/viking.rb:26
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("exercises"."time") FROM "exercises" INNER JOIN "viking_exercises" ON "exercises"."id" = "viking_exercises"."exercise_id" WHERE "viking_exercises"."viking_id" = ?[0m  [["viking_id", 15]]
+  ↳ app/models/viking.rb:30
+  Rendered vikings/show.html.erb within layouts/application (216.6ms)
+Completed 200 OK in 476ms (Views: 383.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/vikings/15/edit" for 127.0.0.1 at 2018-08-24 11:32:39 -0500
+Processing by VikingsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:67
+  Rendering vikings/edit.html.erb within layouts/application
+  [1m[36mDiet Load (0.3ms)[0m  [1m[34mSELECT "diets".* FROM "diets"[0m
+  ↳ app/views/vikings/_form.html.erb:42
+  Rendered vikings/_form.html.erb (45.1ms)
+  Rendered vikings/edit.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 144ms (Views: 130.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/valhallas" for 127.0.0.1 at 2018-08-24 11:33:50 -0500
+Processing by ValhallasController#index as HTML
+  [1m[36mViking Load (0.9ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  Rendering valhallas/index.html.erb within layouts/application
+  Rendered valhallas/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 6254ms (Views: 174.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/vikings/15" for 127.0.0.1 at 2018-08-24 11:34:05 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (5.9ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mViking Load (0.9ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:67
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.3ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:20
+  [1m[36mVikingExercise Load (7.3ms)[0m  [1m[34mSELECT "viking_exercises".* FROM "viking_exercises"[0m
+  ↳ app/models/viking.rb:49
+  [1m[36mViking Load (0.6ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (14.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.6ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT SUM("exercises"."calories") FROM "exercises" INNER JOIN "viking_exercises" ON "exercises"."id" = "viking_exercises"."exercise_id" WHERE "viking_exercises"."viking_id" = ?[0m  [["viking_id", 15]]
+  ↳ app/models/viking.rb:26
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("exercises"."time") FROM "exercises" INNER JOIN "viking_exercises" ON "exercises"."id" = "viking_exercises"."exercise_id" WHERE "viking_exercises"."viking_id" = ?[0m  [["viking_id", 15]]
+  ↳ app/models/viking.rb:30
+  Rendered vikings/show.html.erb within layouts/application (217.2ms)
+Completed 200 OK in 589ms (Views: 501.6ms | ActiveRecord: 31.9ms)
+
+
+Started GET "/vikings/15/edit" for 127.0.0.1 at 2018-08-24 11:34:08 -0500
+Processing by VikingsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:67
+  Rendering vikings/edit.html.erb within layouts/application
+  [1m[36mDiet Load (4.7ms)[0m  [1m[34mSELECT "diets".* FROM "diets"[0m
+  ↳ app/views/vikings/_form.html.erb:42
+  Rendered vikings/_form.html.erb (71.2ms)
+  Rendered vikings/edit.html.erb within layouts/application (90.2ms)
+Completed 200 OK in 248ms (Views: 228.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/diets" for 127.0.0.1 at 2018-08-24 11:34:27 -0500
+Processing by DietsController#index as HTML
+  [1m[36mViking Load (1.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  Rendering diets/index.html.erb within layouts/application
+  [1m[36mDiet Load (1.6ms)[0m  [1m[34mSELECT "diets".* FROM "diets"[0m
+  ↳ app/views/diets/index.html.erb:4
+  Rendered diets/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 280ms (Views: 254.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/diets/1" for 127.0.0.1 at 2018-08-24 11:34:29 -0500
+Processing by DietsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mDiet Load (0.3ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/diets_controller.rb:8
+  Rendering diets/show.html.erb within layouts/application
+  Rendered diets/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 127ms (Views: 118.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/diets" for 127.0.0.1 at 2018-08-24 11:34:31 -0500
+Processing by DietsController#index as HTML
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  Rendering diets/index.html.erb within layouts/application
+  [1m[36mDiet Load (0.4ms)[0m  [1m[34mSELECT "diets".* FROM "diets"[0m
+  ↳ app/views/diets/index.html.erb:4
+  Rendered diets/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 109ms (Views: 95.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/diets/3" for 127.0.0.1 at 2018-08-24 11:34:32 -0500
+Processing by DietsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/diets_controller.rb:8
+  Rendering diets/show.html.erb within layouts/application
+  Rendered diets/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 82ms (Views: 72.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vikings/15" for 127.0.0.1 at 2018-08-24 11:35:33 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (1.5ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:67
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (0.2ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:20
+  [1m[36mVikingExercise Load (1.1ms)[0m  [1m[34mSELECT "viking_exercises".* FROM "viking_exercises"[0m
+  ↳ app/models/viking.rb:49
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM("exercises"."calories") FROM "exercises" INNER JOIN "viking_exercises" ON "exercises"."id" = "viking_exercises"."exercise_id" WHERE "viking_exercises"."viking_id" = ?[0m  [["viking_id", 15]]
+  ↳ app/models/viking.rb:26
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("exercises"."time") FROM "exercises" INNER JOIN "viking_exercises" ON "exercises"."id" = "viking_exercises"."exercise_id" WHERE "viking_exercises"."viking_id" = ?[0m  [["viking_id", 15]]
+  ↳ app/models/viking.rb:30
+  Rendered vikings/show.html.erb within layouts/application (84.9ms)
+Completed 200 OK in 256ms (Views: 207.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/vikings/15/edit" for 127.0.0.1 at 2018-08-24 11:35:34 -0500
+Processing by VikingsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (0.5ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:67
+  Rendering vikings/edit.html.erb within layouts/application
+  [1m[36mDiet Load (0.5ms)[0m  [1m[34mSELECT "diets".* FROM "diets"[0m
+  ↳ app/views/vikings/_form.html.erb:42
+  Rendered vikings/_form.html.erb (36.5ms)
+  Rendered vikings/edit.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 246ms (Views: 235.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/vikings/15/edit" for 127.0.0.1 at 2018-08-24 11:54:39 -0500
+Processing by VikingsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (1.6ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mViking Load (1.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:67
+  Rendering vikings/edit.html.erb within layouts/application
+  [1m[36mDiet Load (0.7ms)[0m  [1m[34mSELECT "diets".* FROM "diets"[0m
+  ↳ app/views/vikings/_form.html.erb:38
+  Rendered vikings/_form.html.erb (39.4ms)
+  Rendered vikings/edit.html.erb within layouts/application (55.3ms)
+Completed 200 OK in 281ms (Views: 213.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2018-08-24 11:54:43 -0500
+Processing by ExercisesController#index as HTML
+  [1m[36mViking Load (0.4ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.erb:3
+  Rendered exercises/index.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 108ms (Views: 96.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-24 11:54:47 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:7
+  Rendered vikings/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 91ms (Views: 84.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/diets" for 127.0.0.1 at 2018-08-24 11:54:56 -0500
+Processing by DietsController#index as HTML
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  Rendering diets/index.html.erb within layouts/application
+  [1m[36mDiet Load (0.5ms)[0m  [1m[34mSELECT "diets".* FROM "diets"[0m
+  ↳ app/views/diets/index.html.erb:4
+  Rendered diets/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 82ms (Views: 70.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/vikings" for 127.0.0.1 at 2018-08-24 11:54:57 -0500
+Processing by VikingsController#index as HTML
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  Rendering vikings/index.html.erb within layouts/application
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT "vikings".* FROM "vikings"[0m
+  ↳ app/views/vikings/index.html.erb:7
+  Rendered vikings/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 142ms (Views: 135.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mDiet Load (2.2ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (5.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDiet Create (10.6ms)[0m  [1m[32mINSERT INTO "diets" ("diet_type", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["diet_type", "Vegan"], ["created_at", "2018-08-24 16:56:03.828301"], ["updated_at", "2018-08-24 16:56:03.828301"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/vikings/15" for 127.0.0.1 at 2018-08-24 11:56:12 -0500
+Processing by VikingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (1.6ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:67
+  Rendering vikings/show.html.erb within layouts/application
+  [1m[36mDiet Load (3.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vikings/show.html.erb:20
+  [1m[36mVikingExercise Load (0.4ms)[0m  [1m[34mSELECT "viking_exercises".* FROM "viking_exercises"[0m
+  ↳ app/models/viking.rb:49
+  [1m[36mViking Load (0.6ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[36mCACHE Viking Load (0.0ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/viking.rb:50
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT SUM("exercises"."calories") FROM "exercises" INNER JOIN "viking_exercises" ON "exercises"."id" = "viking_exercises"."exercise_id" WHERE "viking_exercises"."viking_id" = ?[0m  [["viking_id", 15]]
+  ↳ app/models/viking.rb:26
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT SUM("exercises"."time") FROM "exercises" INNER JOIN "viking_exercises" ON "exercises"."id" = "viking_exercises"."exercise_id" WHERE "viking_exercises"."viking_id" = ?[0m  [["viking_id", 15]]
+  ↳ app/models/viking.rb:30
+  Rendered vikings/show.html.erb within layouts/application (122.5ms)
+Completed 200 OK in 499ms (Views: 319.7ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/vikings/15/edit" for 127.0.0.1 at 2018-08-24 11:56:14 -0500
+Processing by VikingsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (0.3ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:67
+  Rendering vikings/edit.html.erb within layouts/application
+  [1m[36mDiet Load (0.8ms)[0m  [1m[34mSELECT "diets".* FROM "diets"[0m
+  ↳ app/views/vikings/_form.html.erb:38
+  Rendered vikings/_form.html.erb (58.0ms)
+  Rendered vikings/edit.html.erb within layouts/application (66.6ms)
+Completed 200 OK in 190ms (Views: 175.6ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/vikings/15" for 127.0.0.1 at 2018-08-24 11:56:18 -0500
+Processing by VikingsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DsSssc85CcKi+1Hnac1527A2eVwUyBxSyUGtZ6+MYa3aMrZj1aGbux01KbZW+y9ByCexy+bxrW00TsBV8JKhBw==", "viking"=>{"name"=>"Rollo Sigurdsson", "password"=>"[FILTERED]", "age"=>"55", "weight"=>"210.0", "body_fat"=>"20.0", "residence"=>"Paris, France", "calories"=>"3500.0", "image_url"=>"https://i.imgur.com/wByUzTr.gif", "diet_id"=>"4"}, "commit"=>"Update Viking", "id"=>"15"}
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mViking Load (0.1ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:67
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/vikings_controller.rb:42
+  [1m[36mDiet Load (0.1ms)[0m  [1m[34mSELECT  "diets".* FROM "diets" WHERE "diets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/vikings_controller.rb:42
+Redirected to http://localhost:3000/vikings/15/edit
+Completed 200 OK in 38ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/vikings/15/edit" for 127.0.0.1 at 2018-08-24 11:56:18 -0500
+Processing by VikingsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[36mViking Load (0.2ms)[0m  [1m[34mSELECT  "vikings".* FROM "vikings" WHERE "vikings"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/vikings_controller.rb:67
+  Rendering vikings/edit.html.erb within layouts/application
+  [1m[36mDiet Load (0.2ms)[0m  [1m[34mSELECT "diets".* FROM "diets"[0m
+  ↳ app/views/vikings/_form.html.erb:38
+  Rendered vikings/_form.html.erb (11.6ms)
+  Rendered vikings/edit.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 137ms (Views: 124.9ms | ActiveRecord: 0.7ms)
+
+
