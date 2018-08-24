@@ -7,13 +7,13 @@
 </iframe>
 
 <br>
-<!-- 
+<!--
 <%= @temps %>
 
  -->
  <br>
  <h2>Valhallas In <%= @logged_in_viking.name%>'s Vicinity</h2>
- 
+
 <ul class="list-group list-group-flush">
 <% @temps.each do |location| %>
 	<li class="list-group-item"><%= link_to location.name, location.website, target: :_blank %></li>

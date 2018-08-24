@@ -1,5 +1,7 @@
 class ExercisesController < ApplicationController
   before_action :current_exercise, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_if_not_logged_in, only: [:new, :edit]
+
 
 
   def index
@@ -18,7 +20,8 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.new(exercise_params)
     if @exercise.valid?
       @exercise.save
-      redirect_to @exercise
+      VikingExercise.create(viking_id:session[:signed_in_viking_id], exercise:@exercise)
+      redirect_to exercises_path
     else
       flash[:error_message] = @exercise.errors.full_messages.join(', ')
       flash[:form_values] = exercise_params
@@ -34,6 +37,7 @@ class ExercisesController < ApplicationController
     if @exercise.update(exercise_params)
       redirect_to @exercise
     else
+      byebug
       flash[:error_message] = @exercise.errors.full_messages.join(', ')
       redirect_to edit_exercise_path
     end

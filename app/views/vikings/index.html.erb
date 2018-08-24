@@ -6,12 +6,10 @@
 
 <% vikingsfixed = @vikings.select {|viking| viking.id != session[:signed_in_viking_id]} %>
 
-
-
+<ul class="list-group list-group-flush">
 <% vikingsfixed.each do |viking| %>
-	<li>
+	<li class="list-group-item">
 		<%= link_to viking.name, viking %>
 	</li>
-	<br>
 	<% end %>
 </ul>

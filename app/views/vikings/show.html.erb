@@ -1,24 +1,63 @@
-<h2><%= @viking.name %></h2>
+<h2>
+  <%= @viking.name %>
+  <% if @viking.id == session[:signed_in_viking_id] %>
+    <span><%= link_to "Edit Viking", edit_viking_path%></span>
+  <% end %>
+</h2>
 
 </br>
 
-<%= image_tag (@viking.image_url) %>
+<div class="container">
+  <div class="row h-100">
+    <div class="col-sm">
+      <%= image_tag (@viking.image_url), {class:"img-fluid "} %>
+    </div>
+    <div class="col-sm my-auto mx-auto">
+      <p><strong>Age:</strong> <%= @viking.age %></p>
+      <p><strong>Weight (lbs):</strong> <%= @viking.weight %></p>
+      <p><strong>Body Fat (%):</strong> <%= @viking.body_fat %></p>
+      <p><strong>Calories:</strong> <%= @viking.calories %></p>
+      <p><strong>Diet:</strong> <%= link_to @viking.diet.diet_type, @viking.diet %></p>
+    </div>
+  </div>
+</div>
+
+</br>
+</br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <table class="table">
+        <tr>
+          <th>Macros</th>
+          <td class="text-center">Calories to use based on:<strong><%=@viking.diet.diet_type%></strong></td>
+        </tr>
+        <tr>
+          <th>Protein</th>
+          <td class="text-center"><%=@viking.calc_protein%></td>
+        </tr>
+        <tr>
+          <th>Carbs</h>
+          <td class="text-center"><%=@viking.calc_carbs%></td>
+        </tr>
+        <tr>
+          <th>Fats</th>
+          <td class="text-center"><%=@viking.calc_fat%></td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
 
 </br>
 
-</br>
-
-Diet: <%= link_to @viking.diet.diet_type, @viking.diet %>
-
-</br>
-</br>
-
-<h4><%= link_to"Exercises:", exercises_path %></h4>
 <table class="table">
   <tr>
     <th>Exercise</th>
     <th>Calories Burned</th>
-    <th>Elapsed Time</th>
+    <th>Elapsed Time (mins)</th>
   </tr>
   <% @viking.my_viking_exercises.each do |viking_exercise| %>
   <tr>
@@ -42,7 +81,6 @@ Diet: <%= link_to @viking.diet.diet_type, @viking.diet %>
     <td><%= @viking.total_calories %></td>
     <td><%= @viking.total_time %></td>
   </tr>
-
 </table>
 
 
@@ -50,3 +88,12 @@ Diet: <%= link_to @viking.diet.diet_type, @viking.diet %>
   <%= image_tag ('https://78.media.tumblr.com/b03e3d641264d641a21f448c3697f78e/tumblr_p1gn0ajGLH1qc7d45o1_500.gif') %>
 
 <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col ">
+      <% if session[:signed_in_viking_id] %>
+      <%= link_to "Add New Exercise to Viking", new_exercise_path, class:"btn btn-secondary " %>
+      <% end %>
+    </div>
+  </div>
+</div>

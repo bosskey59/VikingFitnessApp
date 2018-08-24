@@ -16,6 +16,8 @@ class Viking < ApplicationRecord
 	validates :weight, numericality: { greater_than: 0}
 	validates :age, numericality: { greater_than: 0}
 	validates :body_fat, numericality: { greater_than: 0}
+	validates :diet_id, numericality: { greater_than: 0, less_than:4}
+
 
 
 
@@ -26,6 +28,21 @@ class Viking < ApplicationRecord
 
 	def total_time
 		self.exercises.sum(:time)
+	end
+
+	def calc_fat
+		fat= (self.diet.fat/100)
+		self.calories*fat
+	end
+
+	def calc_protein
+		protein= (self.diet.protein/100)
+		self.calories*protein
+	end
+
+	def calc_carbs
+		carbs= (self.diet.carbs/100)
+		self.calories*carbs
 	end
 
 	def my_viking_exercises

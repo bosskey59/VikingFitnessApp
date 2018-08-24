@@ -1,9 +1,11 @@
 <h2>All Diets</h2>
+<ul class="list-group list-group-flush">
 
 <% @diets.each do |diet| %>
-	<li>
-		<%= link_to diet.diet_type, diet %>
-	</li>
-	<br>
+	<% if diet.id<4 %>
+		<li class="list-group-item">
+			<%= link_to diet.diet_type, diet %>
+		</li>
 	<% end %>
+<% end %>
 </ul>

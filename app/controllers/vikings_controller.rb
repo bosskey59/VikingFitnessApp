@@ -1,7 +1,7 @@
 class VikingsController < ApplicationController
 
 	before_action :current_viking, only: [:show, :edit, :update, :destroy]
-	before_action :redirect_if_not_logged_in, only: [:index]
+	# before_action :redirect_if_not_logged_in, only: [:index]
 
 	def index
 		@vikings = Viking.all
@@ -30,7 +30,9 @@ class VikingsController < ApplicationController
 		if @viking.save
 			redirect_to @viking
 		else
-			flash[:error_message] = @viking.errors.full_messages.join(', ')
+			error_array = @viking.errors.full_messages.join(', ')
+			error_array.sub!("Diet must be less than 4", "Viking eat MEAT")
+			flash[:error_message] = error_array
 			redirect_to new_viking_path
 		end
 	end
@@ -40,7 +42,9 @@ class VikingsController < ApplicationController
 		if @viking.update(viking_params)
 			redirect_to @viking
 		else
-			flash[:error_message] = @viking.errors.full_messages.join(', ')
+			error_array = @viking.errors.full_messages.join(', ')
+			error_array.sub!("Diet must be less than 4", "Viking eat MEAT")
+			flash[:error_message] = error_array
 			redirect_to edit_viking_path
 		end
 	end
