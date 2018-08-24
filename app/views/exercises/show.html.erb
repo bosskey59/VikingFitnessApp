@@ -1,8 +1,14 @@
 <h1> <%= @exercise.name %> </h1>
-<p> Exercise Type: <%= @exercise.exercise_type %> </p>
-<p> Time: <%= @exercise.time %> </p>
-<p> Calories: <%= @exercise.calories %> </p>
+<p> <strong>Exercise Type: </strong><%= @exercise.exercise_type %> </p>
+<p> <strong>Time (mins): </strong><%= @exercise.time %> </p>
+<p> <strong>Calories: </strong><%= @exercise.calories %> </p>
 <p> <%= @exercise.instruction_link %> </p>
-<p><%= link_to "Add Exercise", viking_exercises_path, method:'create' %> </p>
+</br>
+<% if session[:signed_in_viking_id] %>
+<p>
+  <%= link_to "Edit Exercise",edit_exercise_path, {class:"btn btn-dark"}%>
+  <%= link_to "Add Exercise to Profile", viking_exercises_path, {method:'create', class:"btn btn-primary"}%>
+</p>
+<% end %>
 </br>
 <p>  <%= link_to "Back to exercises", exercises_path %> </p>

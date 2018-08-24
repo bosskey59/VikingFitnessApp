@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Letslift</title>
+    <title>VikingFitness</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="icon" type="image/png" href="/assets/viking_logo_small.png">
   </head>
 
   <nav class="navbar navbar-expand navbar-dark bg-dark">
-  <a class="navbar-brand" href="/vikings"> <img class="img-fluid" src="https://static.thenounproject.com/png/27175-200.png"></a>
+  <a class="navbar-brand" href="/vikings"> <img class="img-fluid" src="/assets/viking_logo_small.png"></a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,6 +25,11 @@
       <li class="nav-item">
         <%= link_to "Diets", diets_path, {class:'nav-link'} %>
       </li>
+      <% if session[:signed_in_viking_id] %>
+        <li class="nav-item">
+          <%= link_to "Valhallas", valhallas_path, {class:'nav-link'} %>
+        </li>
+      <% end %>
     </ul>
     <div class=" my-2 my-md-0">
       <% if session[:signed_in_viking_id] %>
@@ -38,8 +44,7 @@
   </div>
 </nav>
 
-  <body class="container">
-
+  <body class="container ">
 
     <% if session[:signed_in_viking_id] %>
       <p>Welcome, <%= @logged_in_viking.name %></p>
@@ -50,4 +55,69 @@
 
 
   </body>
+
+<footer class="font-small footer bg-dark pt-4 text-secondary">
+    <div class=" container-fluid text-center text-md-left">
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 >Viking Motto</h5>
+          <p>“I have no interest in peace. Peace is a dirty word.” - Ivar</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="">Exercise Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.bodybuilding.com/exercises/!">Body Building Exercises</a>
+              </li>
+              <li>
+                <a href="https://www.yogajournal.com/poses">Yoga Poses</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="">Viking Related Articles</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.bodybuilding.com/fun/arnold-schwarzenegger-blueprint-trainer-mass-training.html">Arnold Schwarzenegger Blueprint</a>
+              </li>
+              <li>
+                <a href="https://warontherocks.com/2015/05/how-to-take-over-a-small-country-in-10-easy-steps/">Taking a Country in 10 easy steps</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="/vikings"> Viking Fitness</a>
+    </div>
+
+  </footer>
 </html>

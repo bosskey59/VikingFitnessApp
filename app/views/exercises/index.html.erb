@@ -1,6 +1,12 @@
-<h2>Exercises :</h2>
+<h2>Exercises</h2>
 <ul class="list-group list-group-flush">
   <% @exercises.each do |exercise| %>
     <li class="list-group-item"> <%= link_to exercise.name, exercise %> </li>
   <% end %>
 </ul>
+</br>
+<div >
+  <% if session[:signed_in_viking_id] %>
+  <%= link_to "Add Exercise", new_exercise_path, class:"btn btn-secondary" %>
+  <% end %>
+</div>

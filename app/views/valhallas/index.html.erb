@@ -6,14 +6,12 @@
     &q=Milan,Italy" allowfullscreen>
 </iframe>
 
-<br><!-- 
+<br><!--
 
 <%= @temps %>
 
  -->
-<ul>
-
-<% @temps.each do |location| %>
-	<li><%= location.name %></li>
-<% end %>
-</ul>
+ <% @temps.each do |location| %>
+     <li><%= location.name %></li>
+ <% end %>
+ </ul>
