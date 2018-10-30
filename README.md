@@ -1,1 +1,1 @@
-Thank you to Erica Lehotzky (@ELehotzky) for all of her help and support on password authentication and routing. This app would not have been the same without her expertise. 
+ 
